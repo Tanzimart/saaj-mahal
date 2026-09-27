@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#800000">
+<title>SAAJ MAHAL | সাজ মহল</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--m:#800000;--md:#5f0000;--g:#d4af37;--bg:#fbf7ef;--ink:#241b17;--mut:#766a62;--line:#eadfd5}
+*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans Bengali",sans-serif;color:var(--ink);background:#fff}a{text-decoration:none;color:inherit}
+.top{background:var(--m);color:#fff;text-align:center;padding:8px;font-size:12px}.nav{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid #eee;display:flex;align-items:center;gap:18px;padding:10px max(14px,calc((100% - 1180px)/2));}
+.logo{display:flex;align-items:center;gap:9px;flex:1}.logo img{width:55px;height:55px;object-fit:contain}.logo b{font:700 23px "Playfair Display";letter-spacing:1.4px;color:var(--m)}.logo small{display:block;font-size:10px;color:#74665c}
+.navlinks{display:flex;gap:20px;font-size:13px;font-weight:700}.navlinks a:hover{color:var(--m)}
+.btn{border:0;border-radius:12px;padding:11px 16px;font-weight:800;cursor:pointer}.primary{background:var(--m);color:#fff}.outline{background:#fff;color:var(--m);border:1px solid #c9a85a}.cartbtn{position:relative}.badge{position:absolute;right:-4px;top:-5px;background:var(--g);color:#fff;border-radius:99px;font-size:10px;padding:2px 6px}
+.hero{background:var(--bg);padding:15px}.hero img{width:100%;max-width:1180px;display:block;margin:auto;border-radius:24px;box-shadow:0 15px 45px #4b24151a}
+.wrap{max-width:1180px;margin:auto;padding:58px 18px}.center{text-align:center}.eyebrow{color:var(--g);font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase}h2{font:600 38px "Playfair Display";color:var(--m);margin:8px 0 28px}.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.cat{padding:22px 8px;border:1px solid var(--line);border-radius:18px;text-align:center;background:#fff}.cat:hover{box-shadow:0 12px 30px #3d1c0e10;transform:translateY(-2px)}.cat span{font-size:27px;display:block}.cat b{display:block;margin-top:7px;font-size:14px}
+.tools{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:20px}.search{flex:1;max-width:460px;border:1px solid var(--line);border-radius:12px;padding:13px 14px;font:inherit}.select{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}.pic{aspect-ratio:1/1.12;background:#f2ece5}.pic img{width:100%;height:100%;object-fit:cover}.body{padding:14px}.body h3{margin:0 0 6px;font-size:15px}.price{font-weight:900;color:var(--m);font-size:17px}.old{text-decoration:line-through;color:#999;font-size:12px;margin-left:5px}.meta{color:var(--mut);font-size:11px;margin-top:5px}.body .btn{width:100%;margin-top:11px}
+.about{background:var(--bg)}.aboutbox{max-width:900px;margin:auto;text-align:center;line-height:1.9}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{border:1px solid var(--line);border-radius:17px;padding:22px;text-align:center}.feature b{display:block;margin:5px}.feature p{margin:0;color:var(--mut);font-size:12px}
+footer{background:#300000;color:#ead8c2;padding:42px 18px 20px}.foot{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}.foot h3{font:600 25px "Playfair Display";color:#fff;margin:0 0 8px}.foot p,.foot a{font-size:12px;line-height:1.9}.copy{text-align:center;border-top:1px solid #ffffff22;padding-top:18px;margin-top:25px;font-size:11px}
+.drawer,.modal{display:none;position:fixed;inset:0;background:#0007;z-index:100}.drawer.open,.modal.open{display:block}.panel{background:#fff;height:100%;width:min(410px,92vw);margin-left:auto;padding:20px;overflow:auto}.modalbox{background:#fff;width:min(560px,94vw);max-height:92vh;overflow:auto;margin:4vh auto;border-radius:20px;padding:22px}
+.close{float:right;background:#fff;border:0;font-size:24px;cursor:pointer}.cartitem{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid #eee}.cartitem img{width:65px;height:75px;object-fit:cover;border-radius:9px}.qty{display:flex;gap:7px;align-items:center;margin-top:7px}.qty button{border:1px solid var(--line);background:#fff;border-radius:7px;width:27px;height:27px}.total{font-size:18px;font-weight:900;margin:18px 0}
+label{font-size:12px;font-weight:700;display:block;margin:10px 0 5px}input,textarea,select{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;font:inherit}textarea{min-height:75px}
+.adminnote{background:#fff8e8;border:1px solid #ead59b;padding:10px;border-radius:10px;font-size:11px;margin-bottom:12px}.adminrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.floating{position:fixed;right:15px;bottom:15px;background:#159447;color:#fff;padding:12px 15px;border-radius:50px;font-weight:800;box-shadow:0 10px 30px #0003;z-index:40}
+@media(max-width:900px){.navlinks{display:none}.cats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.features,.foot{grid-template-columns:1fr 1fr}.tools{flex-wrap:wrap}.search{max-width:none;flex-basis:100%}}
+@media(max-width:520px){.logo img{width:45px;height:45px}.logo b{font-size:18px}.wrap{padding:45px 13px}h2{font-size:31px}.grid{gap:9px}.body{padding:11px}.features,.foot{grid-template-columns:1fr}.hero{padding:8px}.hero img{border-radius:15px}}
+</style>
+</head>
+<body>
+<div class="top">🚚 Nationwide delivery • Cash on Delivery available (configure your policy before launch)</div>
+<header class="nav">
+  <a class="logo" href="#home"><img src="assets/logo.png"><span><b>SAAJ MAHAL</b><small>সাজ মহল • Fashion for Everyone</small></span></a>
+  <nav class="navlinks"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <button class="btn outline cartbtn" onclick="openCart()">🛒 Cart <span class="badge" id="badge">0</span></button>
+</header>
+
+<main id="home">
+<section class="hero"><img src="assets/banner.png" alt="SAAJ MAHAL Fashion"></section>
+
+<section class="wrap" id="categories">
+<div class="center"><div class="eyebrow">Explore</div><h2>Shop by Category</h2></div>
+<div class="cats">
+<a class="cat" href="#shop" onclick="setCat('Women')"><span>👗</span><b>Women</b></a>
+<a class="cat" href="#shop" onclick="setCat('Men')"><span>🧥</span><b>Men</b></a>
+<a class="cat" href="#shop" onclick="setCat('Kids')"><span>🧒</span><b>Kids</b></a>
+<a class="cat" href="#shop" onclick="setCat('Traditional')"><span>🧵</span><b>Traditional</b></a>
+<a class="cat" href="#shop" onclick="setCat('Ethnic')"><span>✨</span><b>Ethnic</b></a>
+</div>
+</section>
+
+<section class="wrap" id="shop">
+<div class="center"><div class="eyebrow">Collection</div><h2>Shop SAAJ MAHAL</h2></div>
+<div class="tools"><input id="search" class="search" placeholder="Search products..." oninput="render()"><select id="filter" class="select" onchange="render()"><option value="All">All Categories</option><option>Women</option><option>Men</option><option>Kids</option><option>Traditional</option><option>Ethnic</option></select></div>
+<div id="products" class="grid"></div>
+</section>
+
+<section class="about" id="about"><div class="wrap">
+<div class="aboutbox"><div class="eyebrow">Our Story</div><h2>Tradition Meets Trend</h2><p><b>SAAJ MAHAL (সাজ মহল)</b> is a fashion destination for women, men and kids. We bring together contemporary style, traditional inspiration and everyday comfort.</p><p><i>Style for every generation.</i></p></div>
+</div></section>
+
+<section class="wrap"><div class="center"><div class="eyebrow">SAAJ MAHAL Promise</div><h2>Shop With Confidence</h2></div>
+<div class="features"><div class="feature">🚚<b>Nationwide Delivery</b><p>Set your actual delivery charges and areas before launch.</p></div><div class="feature">🛡️<b>Product Details</b><p>Clear sizes, fabric and color information.</p></div><div class="feature">💬<b>Customer Support</b><p>Order support through WhatsApp or phone.</p></div></div></section>
+</main>
+
+<footer id="contact"><div class="foot">
+<div><h3>SAAJ MAHAL</h3><p>সাজ মহল<br>Fashion for Everyone.</p></div>
+<div><h3>Quick Links</h3><p><a href="#shop">Shop</a><br><a href="#categories">Categories</a><br><a href="#about">About Us</a></p></div>
+<div><h3>Order Support</h3><p>WhatsApp: <b>ADD YOUR NUMBER</b><br>Email: <b>ADD YOUR EMAIL</b></p></div>
+</div><div class="copy">© <span id="year"></span> SAAJ MAHAL | সাজ মহল. All rights reserved.</div></footer>
+
+<a class="floating" href="#shop">🛍️ Shop Now</a>
+
+<div class="drawer" id="drawer" onclick="if(event.target===this)closeCart()"><div class="panel">
+<button class="close" onclick="closeCart()">×</button><h2 style="margin-top:10px">Your Cart</h2><div id="cart"></div><div class="total">Total: ৳<span id="total">0</span></div>
+<button class="btn primary" style="width:100%" onclick="checkout()">Order via WhatsApp</button>
+<p style="font-size:11px;color:#777;margin-top:10px">This starter uses WhatsApp checkout. Replace the placeholder number in the code with your business WhatsApp number before publishing.</p>
+</div></div>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modalbox">
+<button class="close" onclick="closeModal()">×</button><h2 id="mTitle" style="margin-top:5px">Add Product</h2>
+<div class="adminnote">This is a browser-only product manager. Products are saved on this device using localStorage. For multi-device inventory, online payments and secure customer orders, a real backend is required.</div>
+<div class="adminrow"><div><label>Product name</label><input id="pName"></div><div><label>Category</label><select id="pCat"><option>Women</option><option>Men</option><option>Kids</option><option>Traditional</option><option>Ethnic</option></select></div></div>
+<div class="adminrow"><div><label>Price (৳)</label><input id="pPrice" type="number"></div><div><label>Old price (optional)</label><input id="pOld" type="number"></div></div>
+<label>Image URL or local asset path</label><input id="pImg" placeholder="assets/product-demo.jpg">
+<label>Short details</label><input id="pMeta" placeholder="M / XL / XXL • Premium collection">
+<div style="display:flex;gap:9px;margin-top:16px"><button class="btn primary" onclick="saveProduct()">Save Product</button><button class="btn outline" onclick="closeModal()">Cancel</button></div>
+</div></div>
+
+<script>
+const seed=[
+{id:1,name:"Embroidery Readymade Three Piece",cat:"Women",price:0,old:0,img:"assets/product-demo.jpg",meta:"M / XL / XXL • Premium collection"},
+{id:2,name:"Premium Women’s Collection",cat:"Women",price:0,old:0,img:"assets/product-demo.jpg",meta:"New arrival • Limited pieces"},
+{id:3,name:"Traditional Collection",cat:"Traditional",price:0,old:0,img:"assets/product-demo.jpg",meta:"Elegant • Occasion ready"},
+{id:4,name:"Ethnic Collection",cat:"Ethnic",price:0,old:0,img:"assets/product-demo.jpg",meta:"Style meets tradition"}
+];
+let products=JSON.parse(localStorage.getItem("saajProducts")||"null")||seed;
+let cart=JSON.parse(localStorage.getItem("saajCart")||"[]");
+function money(n){return n?`৳${Number(n).toLocaleString("en-BD")}`:"Price not set"}
+function render(){
+ const q=(document.getElementById("search").value||"").toLowerCase(), f=document.getElementById("filter").value;
+ const list=products.filter(p=>(f==="All"||p.cat===f)&&(!q||p.name.toLowerCase().includes(q)));
+ document.getElementById("products").innerHTML=list.length?list.map(p=>`<article class="card"><div class="pic"><img src="${p.img}" onerror="this.src='assets/product-demo.jpg'"></div><div class="body"><h3>${p.name}</h3><div class="price">${money(p.price)} ${p.old?`<span class="old">৳${Number(p.old).toLocaleString("en-BD")}</span>`:""}</div><div class="meta">${p.meta||""}</div><button class="btn primary" onclick="add(${p.id})">Add to Cart</button></div></article>`).join(""):"<p>No products found.</p>";
+}
+function setCat(c){document.getElementById("filter").value=c;render()}
+function add(id){const p=products.find(x=>x.id===id);const item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({id,qty:1});saveCart();openCart()}
+function saveCart(){localStorage.setItem("saajCart",JSON.stringify(cart));document.getElementById("badge").textContent=cart.reduce((a,b)=>a+b.qty,0);renderCart()}
+function renderCart(){const box=document.getElementById("cart");let total=0;if(!cart.length){box.innerHTML="<p>Your cart is empty.</p>";document.getElementById("total").textContent="0";return}
+box.innerHTML=cart.map(x=>{const p=products.find(y=>y.id===x.id);if(!p)return"";total+=(p.price||0)*x.qty;return `<div class="cartitem"><img src="${p.img}"><div style="flex:1"><b>${p.name}</b><div>${money(p.price)}</div><div class="qty"><button onclick="change(${p.id},-1)">−</button>${x.qty}<button onclick="change(${p.id},1)">+</button><button class="btn outline" style="padding:5px 8px;margin-left:auto" onclick="removeItem(${p.id})">Remove</button></div></div></div>`}).join("");document.getElementById("total").textContent=total.toLocaleString("en-BD")}
+function change(id,d){const x=cart.find(a=>a.id===id);x.qty+=d;if(x.qty<1)cart=cart.filter(a=>a.id!==id);saveCart()}
+function removeItem(id){cart=cart.filter(a=>a.id!==id);saveCart()}
+function openCart(){document.getElementById("drawer").classList.add("open");renderCart()}
+function closeCart(){document.getElementById("drawer").classList.remove("open")}
+function checkout(){
+ if(!cart.length)return alert("Cart is empty.");
+ const num="8801XXXXXXXXX";let msg="SAAJ MAHAL Order%0A%0A";
+ cart.forEach(x=>{const p=products.find(y=>y.id===x.id);msg+=`${encodeURIComponent(p.name)} x ${x.qty} — ${encodeURIComponent(money(p.price))}%0A`});
+ msg+="%0APlease send your name, phone number and delivery address.";
+ window.open(`https://wa.me/${num}?text=${msg}`,"_blank");
+}
+function openModal(){document.getElementById("modal").classList.add("open")}
+function closeModal(){document.getElementById("modal").classList.remove("open")}
+function saveProduct(){
+ const p={id:Date.now(),name:document.getElementById("pName").value.trim(),cat:document.getElementById("pCat").value,price:Number(document.getElementById("pPrice").value||0),old:Number(document.getElementById("pOld").value||0),img:document.getElementById("pImg").value.trim()||"assets/product-demo.jpg",meta:document.getElementById("pMeta").value.trim()};
+ if(!p.name)return alert("Product name is required.");products.push(p);localStorage.setItem("saajProducts",JSON.stringify(products));closeModal();render()
+}
+document.getElementById("year").textContent=new Date().getFullYear();saveCart();render();
+</script>
+</body>
+</html>
