@@ -97,6 +97,22 @@ const seed=[
 {id:3,name:"Traditional Collection",cat:"Traditional",price:0,old:0,img:"assets/product-demo.jpg",meta:"Elegant • Occasion ready"},
 {id:4,name:"Ethnic Collection",cat:"Ethnic",price:0,old:0,img:"assets/product-demo.jpg",meta:"Style meets tradition"}
 ];
+  const seed = [
+  {
+    id: 1, 
+    name: "Embroidery Readymade Three Piece", 
+    cat: "Three Piece", 
+    // আপনার আগের প্রোডাক্টগুলোর ডেটা এখানে থাকবে
+  },
+  {
+    id: 5,
+    name: "Embroidery Readymade Three Piece",
+    price: 2000,
+    cat: "Three Piece",
+    img: "30737.jpg",
+    desc: "প্রিমিয়াম Luxury Blend Fabric-এর তৈরি এই এলিগেন্ট থ্রী পিসটি সাজানো হয়েছে সুন্দর এমব্রয়ডারি কাজ দিয়ে। নেক, হাতা ও সাইডে রয়েছে আকর্ষণীয় এমব্রয়ডারি, সাথে কামিজ, সালোয়ার ও ওড়নার সুন্দর কম্বিনেশন। আরামদায়ক ও স্টাইলিশ ডিজাইন হওয়ায় যেকোনো আয়োজনেই মানিয়ে যাবে। Available Size: M / XL / XXL (M = 36-38, XL = 40-42, XXL = 44-46)"
+  }
+];
 let products=JSON.parse(localStorage.getItem("saajProducts")||"null")||seed;
 let cart=JSON.parse(localStorage.getItem("saajCart")||"[]");
 function money(n){return n?`৳${Number(n).toLocaleString("en-BD")}`:"Price not set"}
